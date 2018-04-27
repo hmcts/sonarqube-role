@@ -1,0 +1,18 @@
+---
+dependency:
+  name: galaxy
+  requirements_file: requirements.yml
+driver:
+  name: docker
+docker:
+  containers:
+    - name: sonarqube-role
+      image: centos/systemd
+      image_version: latest
+      privileged: yes
+      cap_add:
+        - SYS_ADMIN
+      ansible_groups:
+        - sonarqube
+verifier:
+  name: testinfra

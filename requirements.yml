@@ -1,0 +1,4 @@
+---
+- name: java-role
+  src: https://github.com/hmcts/java-role
+  scm: git
