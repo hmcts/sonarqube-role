@@ -2,3 +2,14 @@
 - name: java-role
   src: https://github.com/hmcts/java-role
   scm: git
+  version: master
+
+- name: devops.repos
+  src: https://github.com/hmcts/repos-role.git
+  scm: git
+  version: master
+
+- name: devops.common
+  src: https://github.com/hmcts/common-role.git
+  scm: git
+  version: master
