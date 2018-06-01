@@ -1,3 +1,17 @@
 ---
 # Defaults set in ansible-management.
-sonarqube_admin_password: "admin"
+#sonarqube_admin_password: "YourSonarPassword"
+
+# Database connection details
+#sonarqube_jdbc_dbtype: "postgresql"
+#sonarqube_jdbc_dbname: "sonar_db"
+#sonarqube_jdbc_dbhost: "127.0.0.1"
+#sonarqube_jdbc_username: "sonar"
+#sonarqube_jdbc_password: "YourDatabasePassword"
+
+# Proxy configuration details
+#sonarqube_proxy_host: "proxyout.domain.com"
+#sonarqube_proxy_port: "3128"
+
+# LDAP
+#sonarqube_ldap_url: ""
