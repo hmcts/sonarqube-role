@@ -14,5 +14,11 @@ docker:
         - SYS_ADMIN
       ansible_groups:
         - sonarqube
+      environment:
+        http_proxy: ${http_proxy}
+        https_proxy: ${https_proxy}
+        no_proxy: ${no_proxy}
+ansible:
+  playbook: tests/playbook.yml
 verifier:
   name: testinfra

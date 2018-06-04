@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: true
+  vars:
+    sonarqube_admin_password: "YourSonarPassword"
+    sonarqube_jdbc_dbtype: "postgresql"
+    sonarqube_jdbc_dbname: "sonar_db"
+    sonarqube_jdbc_dbhost: "127.0.0.1"
+    sonarqube_jdbc_username: "sonar"
+    sonarqube_jdbc_password: "YourDatabasePassword"
+    sonarqube_proxy_host: "proxyout.domain.com"
+    sonarqube_proxy_port: "3128"
+    sonarqube_ldap_url: "ldaps://ldap.example.com:636"
+    sonarqube_ldap_base_dn: "ou=People,dc=example,dc=com"
+    sonarqube_ldap_bind_dn: "cn=admin,dc=example,dc=com"
+    sonarqube_ldap_bind_password: "YourBindPassword"
+    sonarqube_ldap_group_base_dn: "ou=groups,dc=example,dc=com"
+  roles:
+    - role: java-role
+    - role: sonarqube-role

@@ -14,4 +14,8 @@
 #sonarqube_proxy_port: "3128"
 
 # LDAP
-#sonarqube_ldap_url: ""
+#sonarqube_ldap_url: "ldaps://ldap.example.com:636"
+#sonarqube_ldap_base_dn: "ou=People,dc=example,dc=com"
+#sonarqube_ldap_bind_dn: "cn=admin,dc=example,dc=com"
+#sonarqube_ldap_bind_password: "YourBindPassword"
+#sonarqube_ldap_group_base_dn: "ou=groups,dc=example,dc=com"
