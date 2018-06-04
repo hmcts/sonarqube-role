@@ -1,0 +1,20 @@
+# Database configuration
+sonar.jdbc.username={{ sonarqube_jdbc_username }}
+sonar.jdbc.password={{ sonarqube_jdbc_password }}
+sonar.jdbc.url=jdbc:{{ sonarqube_jdbc_dbtype }}://{{ sonarqube_jdbc_dbhost }}/{{ sonarqube_jdbc_dbname }}
+
+# Proxy configuration
+http.proxyHost={{ sonarqube_proxy_host }}
+http.proxyPort={{ sonarqube_proxy_port }}
+
+# LDAP configuration
+sonar.security.realm=LDAP
+ldap.url={{ sonarqube_ldap_url }}
+ldap.user.baseDn={{ sonarqube_ldap_base_dn }}
+ldap.bindDn={{ sonarqube_ldap_bind_dn }}
+ldap.bindPassword={{ sonarqube_ldap_bind_password }}
+
+# LDAP group configuration
+ldap.group.baseDn={{ sonarqube_ldap_group_base_dn }}
+ldap.group.request=(&(objectClass=posixGroup)(memberUid={uid}))
+ldap.group.idAttribute=cn
