@@ -1,0 +1,21 @@
+---
+- name: Get SonarQube Repo
+  yum_repository:
+    name: SonaQube
+    description: SonarQube Repo
+    baseurl: http://downloads.sourceforge.net/project/sonar-pkg/rpm
+    gpgcheck: no
+
+- name: Install sonar packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+       - "sonar-{{ sonarqube_version }}"
+
+- name: Install sonar plugins
+  get_url:
+    url: "{{ item.baseurl }}/{{ item.name }}-{{ item.version}}.jar"
+    dest: "/opt/sonar/extensions/plugins/{{ item.name }}-{{ item.version}}.jar"
+  with_items: "{{ sonarqube_plugins }}"
+  notify: restart sonar

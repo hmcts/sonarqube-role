@@ -1,33 +1,7 @@
 ---
-# tasks file for SonarQube
-
-- name: Get SonarQube Repo
-  yum_repository:
-    name: SonaQube
-    description: SonarQube Repo
-    baseurl: http://downloads.sourceforge.net/project/sonar-pkg/rpm
-    gpgcheck: no
-
-- name: Install Required Packages
-  package:
-    name: "{{item}}"
-    state: present
-  with_items:
-       - "sonar-6.4-1"
-
-- name: Create sonar configuration file
-  template:
-    src: "sonar.properties.j2"
-    dest: "/opt/sonar/conf/sonar.properties"
-    owner: root
-    group: root
-    mode: 0644
-    backup: true
-
-- name: Start Required Services
-  service:
-    name: "{{item}}"
-    state: started
-    enabled: yes
-  with_items:
-       - sonar
+- include_tasks: 01-install.yml
+  tags: ['sonarqube','sonarqube-install']
+- include_tasks: 02-configure.yml
+  tags: ['sonarqube','sonarqube-configure']
+- include_tasks: 03-service.yml
+  tags: ['sonarqube','sonarqube-service']

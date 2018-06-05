@@ -1,0 +1,10 @@
+---
+- name: Create sonar configuration file
+  template:
+    src: "sonar.properties.j2"
+    dest: "/opt/sonar/conf/sonar.properties"
+    owner: root
+    group: root
+    mode: 0644
+    backup: true
+  notify: restart sonar
