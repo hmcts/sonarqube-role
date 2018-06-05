@@ -21,10 +21,10 @@
 #sonarqube_ldap_group_base_dn: "ou=groups,dc=example,dc=com"
 
 # General
-sonarqube_version: "6.4-1"
+sonarqube_version: "6.7-1"
 
 # Plugins
-sonarqube_plugins: "{{ sonarqube_plugins_sonar64 }}"
+sonarqube_plugins: "{{ sonarqube_plugins_sonar67 }}"
 
 sonarqube_plugins_sonar64:
   - name: "sonar-scm-git-plugin"
