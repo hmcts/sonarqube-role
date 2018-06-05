@@ -1,0 +1,8 @@
+---
+- name: Enable and start service
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  with_items:
+       - sonar
