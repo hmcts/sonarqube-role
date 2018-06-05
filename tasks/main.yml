@@ -1,7 +1,12 @@
 ---
-- include_tasks: 01-install.yml
+- name: Include 01
+  include_tasks: 01-install.yml
   tags: ['sonarqube','sonarqube-install']
-- include_tasks: 02-configure.yml
+
+- name: Include 02
+  include_tasks: 02-configure.yml
   tags: ['sonarqube','sonarqube-configure']
-- include_tasks: 03-service.yml
+
+- name: Include 03
+  include_tasks: 03-service.yml
   tags: ['sonarqube','sonarqube-service']
