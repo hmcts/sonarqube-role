@@ -3,8 +3,8 @@
   template:
     src: "sonar.properties.j2"
     dest: "/opt/sonar/conf/sonar.properties"
-    owner: root
-    group: root
-    mode: 0644
+    owner: sonar
+    group: sonar
+    mode: 0600
     backup: true
   notify: restart sonar

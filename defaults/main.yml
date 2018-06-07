@@ -8,6 +8,7 @@
 #sonarqube_jdbc_dbhost: "127.0.0.1"
 #sonarqube_jdbc_username: "sonar"
 #sonarqube_jdbc_password: "YourDatabasePassword"
+#sonarqube_jdbc_ssl: "true"
 
 # Proxy configuration details
 #sonarqube_proxy_host: "proxyout.domain.com"
