@@ -1,7 +1,7 @@
 # Database configuration
 sonar.jdbc.username={{ sonarqube_jdbc_username }}
 sonar.jdbc.password={{ sonarqube_jdbc_password }}
-sonar.jdbc.url=jdbc:{{ sonarqube_jdbc_dbtype }}://{{ sonarqube_jdbc_dbhost }}/{{ sonarqube_jdbc_dbname }}
+sonar.jdbc.url=jdbc:{{ sonarqube_jdbc_dbtype }}://{{ sonarqube_jdbc_dbhost }}/{{ sonarqube_jdbc_dbname }}?ssl={{ sonarqube_jdbc_ssl|default("true") }}
 
 # Proxy configuration
 http.proxyHost={{ sonarqube_proxy_host }}
