@@ -101,7 +101,7 @@ sonarqube_plugins_sonar67:
     baseurl: "https://sonarsource.bintray.com/Distribution/sonar-typescript-plugin"
   - name: "sonar-pitest-plugin"
     version: "0.8" # Stick to old verison as 0.9 does not show "mutation analysis" data
-    baseurl: "https://github.com/VinodAnandan/sonar-pitest/releases/download/v0.8"
+    baseurl: "https://github.com/VinodAnandan/sonar-pitest/releases/download/0.8"
   - name: "sonar-github-plugin"
     version: "1.4.2.1027"
     baseurl: "https://sonarsource.bintray.com/Distribution/sonar-github-plugin"
